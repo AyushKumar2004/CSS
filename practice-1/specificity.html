@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+    <style>
+        div{
+            width:300px;
+            height:600px;
+            border:2px solid black;
+            padding:40px;
+            background-color:aqua;
+        }
+        h1{
+            background-color:yellow;
+            text-align:center;
+        }
+
+        p{
+            color:red;
+            font-weight:600;
+            font-style:italic;
+        }
+
+        li{
+            font-size:17px;
+            font-weight:700;
+        }
+
+        span{
+            background-color:tomato;
+            height:100px;
+            width:100px;
+            display:block;
+            padding:25px;
+        }
+
+        .container{
+            background-color:blanchedalmond;
+            border:2px solid red;
+        }
+
+        #spanContainer{
+            border:2px solid black;
+            font-size:18px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>CSS Specificity</h1>
+        <p>
+            If there are two or more css rules that point to the same element,the selector with the highest speifity value will "win",and its style declaration will be applied to that html element.
+        </p>
+        <p>
+            Inline css has higher priority followed by Internal and then External 
+        </p>
+        <p>Rank below high to low</p>
+        <ul>
+            <li>inline CSS</li>
+            <li>ID Selector</li>
+            <li>Class Selector</li>
+            <li>tag name Selector</li>
+        </ul>
+
+        <h2>Example below</h2>
+        <span class="container" id="spanContainer" style="color:blue">This is used for check specificity of css selector</span>
+    </div>
+</body>
+</html>
