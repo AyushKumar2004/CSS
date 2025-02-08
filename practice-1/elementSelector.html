@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element-Selector</title>
+
+    <style>
+        div{
+            width:300px;
+            background-color:aliceblue;
+            height:700px;
+            border:2px solid black;
+            padding:40px;
+        }
+
+        h1{
+            background-color:yellow;
+            text-align:center;
+        }
+
+        b{
+            color:rgb(0,0,0);
+            font-style:normal;
+        }
+
+        #para{
+            color:red;
+            font-weight:600;
+            font-style:italic;
+        }
+
+        .code{
+            background-color:black;
+            color:white;
+            border-radius:8px;
+            padding:15px;
+            font-family:Verdana,Geneva,Tahoma,sans-serif;
+        }
+
+        ul li{
+            font-weight:500;
+        }
+
+        .test{
+            text-align:center;
+            padding:5px;
+            margin:7px;
+            background-color:aquamarine;
+            font-size:16px;
+            border:2px solid red;
+            border-radius:4px;
+            transition: 0.5s;
+        }
+
+        #over:hover{
+            background-color:red;
+            color:yellow;
+        }
+
+        #focus:focus{
+            background-color: yellow;
+            color:red;
+        }
+
+        .Pseudo-class{
+            width:500px;
+            height:300px;
+            margin-top:10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Element Selector</h1>
+        <p id="para">
+            Element selctor basically select elemnet/tag directly,select element based on name id class
+            <br><br>
+            <b>Example-Select by name</b>
+            <pre class="code">
+                p{
+                    text-align:center;
+                    color:red;
+                }
+            </pre><br>
+            <b>Example- ID Selector</b>
+            <pre class="code">
+                #para1{
+                    text-align:center;
+                    color:red;
+                }
+            </pre><br>
+            <b>Example: Class Selector</b>
+            <pre class="code">
+                .para1{
+                    text-align:center;
+                    color:red;
+                }
+            </pre>
+        </p>
+    </div>
+
+    <!--pseudo selector-->
+    <div class="Pseudo-class">
+        <h1>Pseudo Class Selector</h1>
+        <p>A Pseudo-class is used to define a special state of an element.</p>
+        <p>For example,it can be used to:</p>
+        <ul>
+            <li>Style an element when a user mouses over it</li>
+            <li>Style visited and unvisited links differently</li>
+            <li>Style an element when it gets focus</li>
+        </ul>
+
+        <button class="test" id="over">Mouse Over Me</button>
+        <input type="text" class="test" placeholder="click me to get focus" id="focus">
+    </div>
+    
+</body>
+</html>
