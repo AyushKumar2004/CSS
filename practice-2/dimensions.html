@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dimensions</title>
+    <style>
+        .box{
+            /* height:200px;
+            width:200px; */
+            border:2px solid black;
+            display:inline-block;
+            font-weight:900;
+            box-sizing:border-box;
+            margin:5px;
+            vertical-align:top;
+        }
+        #box1{
+            width:500px;
+            height:500px;
+        }
+        #box2{
+            /* the box will not expand when its max-width is reached while it eill shrink if the window is smaller */
+            max-width:550px;
+            max-height:500px;
+        }
+        #box3{
+            /* the box will shrink when we shrink the window until it reaches the min-width and from there it will remain like it*/
+            min-width:500px;
+            min-height:500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Dimensions</h1>
+    <div class="box" id="box1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque magnam nihil repellendus rem corporis quibusdam amet facilis, doloribus explicabo? Atque reprehenderit, omnis ad doloribus consectetur vero vitae neque inventore iste!
+    </div>
+    <div class="box" id="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt error vitae nostrum voluptate dolor tempora architecto perspiciatis ipsam, iste repudiandae ducimus aliquid officiis ipsum doloremque cum. Repudiandae saepe iure inventore.
+    </div>
+    <div class="box" id="box3">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque veniam assumenda optio nesciunt neque eum ducimus non deleniti ipsum, necessitatibus libero suscipit nobis quis ipsam possimus perferendis accusantium perspiciatis quidem?
+    </div>
+</body>
+</html>
