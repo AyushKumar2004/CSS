@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alignItems</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .flex-box {
+        width: 350px;
+        height: 250px;
+        background-color: aquamarine;
+        border: 2px solid red;
+        display: flex;
+
+        align-items:baseline;
+        align-items:flex-start;
+        align-items:flex-end;
+        align-items:center;
+        /* when height is specifed it will not work */
+        align-items:stretch;
+
+        /* Gap */
+        gap:10%;
+        gap:5px;
+        gap:calc(10px+4%);
+      }
+
+      .flex-item {
+        width: 70px;
+        height: 100px;
+        background-color: aqua;
+        border: 2px solid blue;
+      }
+      /* the element which has less order will come first */
+      #item1{
+        order:3;
+      }
+      #item2{
+        order:4;
+      }
+      #item3{
+        order:1;
+      }
+    </style>
+</head>
+<body>
+    <h1>Align Items</h1>
+    <div class="flex-box">
+      <div class="flex-item" id="item1">1</div>
+      <div class="flex-item" id="item2">2</div>
+      <div class="flex-item" id="item3">3</div>
+    </div>
+</body>
+</html>
