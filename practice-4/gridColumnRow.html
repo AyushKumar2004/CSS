@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid column and row</title>
+    <style>
+        .container{
+            display:grid;
+            background-color: aqua;
+            height:400px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:30px 1fr 30px;
+            text-align:center;
+        }
+        .box{
+            background-color: dimgray;
+            color:#fff;
+            border:1px solid lightgreen;
+        }
+        /* grid-column-start says the line at which the column will start means the first line will be befire first column second will be after first column and third will be after second column and vice versa for row */
+        /* #header{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        #footer{
+            shorthand property
+            grid-column:1/5;
+        }
+        #content{
+            grid-column-start:2;
+            grid-column-end:4;
+        } */
+
+        /* here:: |1 |2 |3 |4 |5 
+                   c1 c2 c3 c4 */
+
+        /* span is basically expanding across given line if span is 2 then column will expand till line 2 and end at line 3 means third column */
+
+        /* here :: |1  2 |3 |4 |5 */
+
+        #header{
+            grid-column:1/span 4;
+        }
+        #footer{
+            /* span across end column -1 represents last grid line */
+            grid-column:1/-1;
+        }
+        #content{
+            grid-column:2/4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid column Starts and Ends /Grids Row Starts and Ends</h1>
+    <div class="container">
+        <div class="box" id="header">Header</div>
+        <div class="box" id="menu">menu</div>
+        <div class="box" id="content">content</div>
+        <div class="box" id="sidebar">sidebar</div>
+        <div class="box" id="footer">footer</div>
+    </div>
+</body>
+</html>
