@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridArea</title>
+    <style>
+        .container{
+            display:grid;
+            background-color: aqua;
+            height:400px;
+            text-align:center;
+            /* row/column */
+            grid-template:40px 1fr 40px/repeat(4,1fr);
+            grid-template-areas:
+            "h h h h"
+            "m c c s"
+            "f f f f";
+        }
+        .box{
+            background-color: dimgray;
+            color:#fff;
+            border:1px solid lightgreen;
+        }
+
+        #header{
+            grid-area:h;
+        }
+        #footer{
+            grid-area:f;
+        }
+        #sidebar{
+            grid-area:s;
+        }
+        #menu{
+            grid-area:m;
+        }
+        #content{
+            grid-area:c;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div class="container">
+        <div class="box" id="header">header</div>
+        <div class="box" id="menu">Menu</div>
+        <div class="box" id="content">Content</div>
+        <div class="box" id="sidebar">Sidebar</div>
+        <div class="box" id="footer">Footer</div>
+    </div>
+</body>
+</html>
