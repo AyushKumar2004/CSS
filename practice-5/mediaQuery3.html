@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mediaQuery-3</title>
+    <style>
+        .container{
+            width:800px;
+            height:100px;
+        }
+        .box{
+            background-color: yellow;
+            border:2px solid red;
+            height:20%;
+            width:50%;
+            font-size:18px;
+            font-weight:700;
+        }
+        .fontDec{
+            background-color: aqua;
+            border:2px solid red;
+            margin-top:5px;
+            font-size:60px;
+        }
+        body{
+            background-color: lightgreen;
+        }
+        @media screen and (max-width:600px){
+            .box{
+                display:none;
+                /* visibility: hidden; */
+            }
+        }
+        @media screen and (max-width:900px) and (min-width:600px){
+            .fontDec{
+                font-size:20px;
+            }
+        }
+        @media screen and (orientation:landscape){
+            body{
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Query</h1>
+    <div class="container">
+        <div class="box">I am div</div>
+        <div class="fontDec">This is font size of 60px</div>
+    </div>
+    
+</body>
+</html>
