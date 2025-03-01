@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Fill Mode</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+            background-color: aqua;
+        }
+        .box{
+            height:100px;
+            width:100px;
+            background-color: red;
+            position:relative;
+            animation-name:move;
+            animation-duration:4s;
+            animation-delay:2s;
+            animation-iteration-count: 4;
+            /* retain the styles value of first keyframes bg-color here we can see in delay */
+            animation-fill-mode: backwards;
+            /* retain the styles value of last keyframe(100%) */
+            animation-fill-mode: forwards;
+            /* take the property of both */
+            animation-fill-mode: both;
+        }
+        @keyframes move{
+            from{
+                background-color: yellow;
+                left:0;
+            }
+            to{
+                background-color: yellowgreen;
+                left:500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
