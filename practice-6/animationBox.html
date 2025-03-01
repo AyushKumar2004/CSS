@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-Box</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+            background-color: aqua;
+        }
+        .box{
+            height:100px;
+            width:100px;
+            background-color: red;
+            position:relative;
+            border:2px solid yellow;
+            /* animation direction-reverse,alternate,reverse-alternate */
+            animation:move 4s linear 2s 4;
+            animation:move 4s linear 2s 4 alternate;
+            animation:move 4s linear 2s 4 reverse;
+            animation:move 4s linear 2s 4 alternate-reverse;
+            /* animation-delay:2s; */
+        }
+        @keyframes move{
+            0%{
+                background-color: red;
+                left:0;
+                top:0;
+            }
+            25%{
+                background-color: blue;
+                left:200px;
+                top:0;
+            }
+            50%{
+                background-color: yellow;
+                left:200px;
+                top:200px;
+            }
+            75%{
+                background-color: greenyellow;
+                top:200px;
+                left:0;
+            }
+            100%{
+                background-color: red;
+                left:0;
+                top:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
